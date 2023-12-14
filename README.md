@@ -26,6 +26,10 @@ The application utilizes the Art Institute of Chicago API to fetch artworks. It 
 
 In this project, toast notifications were implemented to provide instant feedback to users when they add an artwork to their favorites. However, due to the lack of implementation of push notification certificates and Apple Developer configuration, push notifications were not included in the iOS application. To send push notifications to an iOS application, it's necessary to set up push notification certificates in the Apple Developer portal and then integrate them into the Xcode project.
 
+### State Management
+
+For state management, the project uses AsyncStorage for storing and retrieving the user's favorite artworks. The choice to use AsyncStorage over context/redux was primarily due to the simplicity of the application's state requirements. AsyncStorage is a straightforward and effective method for managing local data without the complexity of integrating a larger state management library.
+
 ## Getting Started
 
 To get started with the project, follow these steps:

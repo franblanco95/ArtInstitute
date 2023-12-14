@@ -35,7 +35,7 @@ const ArtworkDetailsScreen: React.FC<ArtworkDetailsSreenProps> = ({
 
   return (
     <ScrollView
-      style={styles.mainContainer}
+      contentContainerStyle={styles.mainContainer}
       bounces={false}
       showsVerticalScrollIndicator={false}>
       {isLoading && !data ? (
@@ -51,8 +51,6 @@ const ArtworkDetailsScreen: React.FC<ArtworkDetailsSreenProps> = ({
           </Pressable>
         </ImageBackground>
       )}
-
-      <Toast />
 
       <View style={styles.descriptionContainer}>
         <FavoriteButton
@@ -85,6 +83,7 @@ const ArtworkDetailsScreen: React.FC<ArtworkDetailsSreenProps> = ({
             <Text style={styles.infoText}>{item.description}</Text>
           </>
         )}
+        <Toast />
       </View>
     </ScrollView>
   );
@@ -94,7 +93,7 @@ export default ArtworkDetailsScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: 'white',
   },
   backButton: {
